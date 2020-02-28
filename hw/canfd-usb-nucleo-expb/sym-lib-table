@@ -1,4 +1,6 @@
 (sym_lib_table
   (lib (name ATA6561-GAQW-N)(type Legacy)(uri "E:/Circuit design/EmbeddedSchool-canfd-usb/libs/ATA6561-lib/ATA6561-GAQW-N.lib")(options "")(descr ""))
   (lib (name canfd-usb-nucleo-expb-cache)(type Legacy)(uri ${KIPRJMOD}/canfd-usb-nucleo-expb-cache.lib)(options "")(descr ""))
+  (lib (name 2020-02-25_22-22-23)(type Legacy)(uri F:/projects/can-usb/lib/2020-02-25_22-22-23/2020-02-25_22-22-23.lib)(options "")(descr ""))
+  (lib (name canfd-usb-nucleo-expb-rescue)(type Legacy)(uri ${KIPRJMOD}/canfd-usb-nucleo-expb-rescue.lib)(options "")(descr ""))
 )
