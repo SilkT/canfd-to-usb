@@ -438,28 +438,6 @@ F 3 "~" H 7200 5950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C3
-U 1 1 5E64426A
-P 4500 5400
-F 0 "C3" H 4615 5446 50  0000 L CNN
-F 1 "100n" H 4615 5355 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4538 5250 50  0001 C CNN
-F 3 "~" H 4500 5400 50  0001 C CNN
-	1    4500 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR013
-U 1 1 5E644270
-P 4500 5600
-F 0 "#PWR013" H 4500 5350 50  0001 C CNN
-F 1 "GND" H 4505 5427 50  0000 C CNN
-F 2 "" H 4500 5600 50  0001 C CNN
-F 3 "" H 4500 5600 50  0001 C CNN
-	1    4500 5600
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR022
 U 1 1 5E644276
 P 7200 6100
@@ -474,23 +452,6 @@ Text GLabel 5250 5800 0    50   Output ~ 0
 RX3
 Text GLabel 5250 5650 0    50   Input ~ 0
 TX3
-$Comp
-L power:+5V #PWR012
-U 1 1 5E64427E
-P 4500 5250
-F 0 "#PWR012" H 4500 5100 50  0001 C CNN
-F 1 "+5V" H 4515 5423 50  0000 C CNN
-F 2 "" H 4500 5250 50  0001 C CNN
-F 3 "" H 4500 5250 50  0001 C CNN
-	1    4500 5250
-	1    0    0    -1  
-$EndComp
-Connection ~ 4500 5250
-Wire Wire Line
-	4500 5550 5000 5550
-Wire Wire Line
-	4500 5550 4500 5600
-Connection ~ 4500 5550
 Wire Wire Line
 	7200 5800 7100 5800
 Wire Wire Line
@@ -529,8 +490,6 @@ Wire Wire Line
 	9000 5550 9350 5550
 Text GLabel 6950 4950 0    50   Input ~ 0
 STANDBY_3
-Wire Wire Line
-	4500 5250 5000 5250
 Wire Wire Line
 	5500 5500 5000 5500
 Wire Wire Line
@@ -580,17 +539,6 @@ Wire Wire Line
 	7750 3250 7750 3300
 Text Notes 7850 1050 0    50   ~ 0
 Solder jumper or 0R resistor\nfor STANDBY mode
-$Comp
-L power:+5V #PWR02
-U 1 1 5E7BB094
-P 2000 4950
-F 0 "#PWR02" H 2000 4800 50  0001 C CNN
-F 1 "+5V" H 2015 5123 50  0000 C CNN
-F 2 "" H 2000 4950 50  0001 C CNN
-F 3 "" H 2000 4950 50  0001 C CNN
-	1    2000 4950
-	1    0    0    -1  
-$EndComp
 $Comp
 L Switch:SW_Push_Dual_x2 SW1
 U 1 1 5E5E7AB8
@@ -973,20 +921,20 @@ F 3 "" H 5500 1550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L canfd-usb-nucleo:BH_Conn_01x10 J?
+L canfd-usb-nucleo:BH_Conn_01x10 J3
 U 2 1 5E642078
-P 10350 5400
-F 0 "J?" H 10368 5075 50  0000 C CNN
-F 1 "Conn_01x10" H 10368 5166 50  0000 C CNN
-F 2 "" H 10350 5400 50  0001 C CNN
-F 3 "~" H 10350 5400 50  0001 C CNN
-	2    10350 5400
+P 10400 5400
+F 0 "J3" H 10418 5075 50  0000 C CNN
+F 1 "Conn_01x10" H 10418 5166 50  0000 C CNN
+F 2 "can-usb:IDC-Header_2x05_P2.54mm_Vertical" H 10400 5400 50  0001 C CNN
+F 3 "~" H 10400 5400 50  0001 C CNN
+	2    10400 5400
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	10150 5500 10100 5500
+	10200 5500 10100 5500
 Wire Wire Line
-	10100 5600 10150 5600
+	10100 5600 10200 5600
 Wire Wire Line
 	9750 5600 9750 5550
 Wire Wire Line
@@ -1000,14 +948,14 @@ Wire Wire Line
 Wire Wire Line
 	9000 5200 10000 5200
 $Comp
-L canfd-usb-nucleo:BH_Conn_01x10 J?
+L canfd-usb-nucleo:BH_Conn_01x10 J2
 U 2 1 5E6372F3
-P 10300 3700
-F 0 "J?" H 10318 3375 50  0000 C CNN
-F 1 "Conn_01x10" H 10318 3466 50  0000 C CNN
-F 2 "" H 10300 3700 50  0001 C CNN
-F 3 "~" H 10300 3700 50  0001 C CNN
-	2    10300 3700
+P 10400 3700
+F 0 "J2" H 10418 3375 50  0000 C CNN
+F 1 "Conn_01x10" H 10418 3466 50  0000 C CNN
+F 2 "can-usb:IDC-Header_2x05_P2.54mm_Vertical" H 10400 3700 50  0001 C CNN
+F 3 "~" H 10400 3700 50  0001 C CNN
+	2    10400 3700
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -1022,9 +970,9 @@ Wire Wire Line
 Wire Wire Line
 	10100 5500 10100 5550
 Wire Wire Line
-	10000 5400 10150 5400
+	10000 5400 10200 5400
 Wire Wire Line
-	10000 5700 10150 5700
+	10000 5700 10200 5700
 Wire Wire Line
 	9750 5550 10100 5550
 Connection ~ 9750 5550
@@ -1038,37 +986,26 @@ Wire Wire Line
 Wire Wire Line
 	10050 3850 10050 3800
 Wire Wire Line
-	10050 3800 10100 3800
+	10050 3800 10200 3800
 Connection ~ 9750 3850
 Wire Wire Line
-	10100 3900 10050 3900
+	10200 3900 10050 3900
 Wire Wire Line
 	10050 3900 10050 3850
 Connection ~ 10050 3850
 Wire Wire Line
-	10100 3700 10000 3700
+	10200 3700 10000 3700
 Wire Wire Line
 	10000 3700 10000 3500
 Wire Wire Line
 	9000 3500 10000 3500
 Wire Wire Line
-	10100 4000 10000 4000
+	10200 4000 10000 4000
 Wire Wire Line
 	10000 4000 10000 4200
 Wire Wire Line
 	10000 4200 9000 4200
 Connection ~ 9000 4200
-$Comp
-L canfd-usb-nucleo:BH_Conn_01x10 J?
-U 2 1 5E5E91C9
-P 10400 1800
-F 0 "J?" H 10418 1475 50  0000 C CNN
-F 1 "Conn_01x10" H 10418 1566 50  0000 C CNN
-F 2 "" H 10400 1800 50  0001 C CNN
-F 3 "~" H 10400 1800 50  0001 C CNN
-	2    10400 1800
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	10200 2100 10100 2100
 Wire Wire Line
@@ -1090,21 +1027,6 @@ Wire Wire Line
 Connection ~ 9750 1950
 Wire Wire Line
 	9750 1950 10150 1950
-$Comp
-L Device:D_Schottky D?
-U 1 1 5E92324D
-P 2000 5150
-F 0 "D?" V 1954 5229 50  0000 L CNN
-F 1 "D_Schottky" V 2045 5229 50  0000 L CNN
-F 2 "" H 2000 5150 50  0001 C CNN
-F 3 "~" H 2000 5150 50  0001 C CNN
-	1    2000 5150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2000 5350 2000 5300
-Wire Wire Line
-	2000 4950 2000 5000
 Wire Wire Line
 	7800 3700 8650 3700
 Wire Wire Line
@@ -1131,39 +1053,6 @@ Text GLabel 1950 4350 2    50   Output ~ 0
 STANDBY_1
 Wire Wire Line
 	7100 3650 7350 3650
-$Comp
-L Connector:USB_C_Receptacle_USB2.0 J?
-U 1 1 5E770DAD
-P 1100 5950
-F 0 "J?" H 1207 6817 50  0000 C CNN
-F 1 "USB_C_Receptacle_USB2.0" H 1207 6726 50  0000 C CNN
-F 2 "" H 1250 5950 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1250 5950 50  0001 C CNN
-	1    1100 5950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Power_Protection:NUP2202 U?
-U 1 1 5E775B10
-P 2100 6950
-F 0 "U?" H 2344 6996 50  0000 L CNN
-F 1 "USBLC6-2SC6" H 2344 6905 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 2180 7025 50  0001 C CNN
-F 3 "http://www.onsemi.ru.com/pub_link/Collateral/NUP2202W1-D.PDF" H 2180 7025 50  0001 C CNN
-	1    2100 6950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5E775B16
-P 2100 7150
-F 0 "#PWR?" H 2100 6900 50  0001 C CNN
-F 1 "GND" H 2105 6977 50  0000 C CNN
-F 2 "" H 2100 7150 50  0001 C CNN
-F 3 "" H 2100 7150 50  0001 C CNN
-	1    2100 7150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1700 5950 1800 5950
 Wire Wire Line
@@ -1173,28 +1062,9 @@ Wire Wire Line
 Wire Wire Line
 	1700 6150 1800 6150
 Wire Wire Line
-	1900 6100 1900 6950
-Wire Wire Line
-	1700 5350 2000 5350
-Wire Wire Line
-	2100 5350 2100 6750
-Text GLabel 2450 6100 2    50   BiDi ~ 0
-D+
-Text GLabel 2450 5900 2    50   BiDi ~ 0
-D-
-Wire Wire Line
-	2450 5900 2300 5900
-Connection ~ 2000 5350
-Wire Wire Line
-	2000 5350 2100 5350
-Connection ~ 2100 7150
-Wire Wire Line
 	1800 5850 1800 5900
 Wire Wire Line
 	1800 6050 1800 6100
-Wire Wire Line
-	2300 5900 1800 5900
-Connection ~ 2300 5900
 Connection ~ 1800 5900
 Wire Wire Line
 	1800 5900 1800 5950
@@ -1202,10 +1072,10 @@ Connection ~ 1800 6100
 Wire Wire Line
 	1800 6100 1800 6150
 $Comp
-L Device:R R?
+L Device:R R1
 U 1 1 5E8F963A
 P 800 7000
-F 0 "R?" H 869 6954 50  0000 L CNN
+F 0 "R1" H 869 6954 50  0000 L CNN
 F 1 "220k" H 869 7045 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 730 7000 50  0001 C CNN
 F 3 "~" H 800 7000 50  0001 C CNN
@@ -1213,10 +1083,10 @@ F 3 "~" H 800 7000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C4
 U 1 1 5E90F92E
 P 1000 7000
-F 0 "C?" H 1115 7046 50  0000 L CNN
+F 0 "C4" H 1115 7046 50  0000 L CNN
 F 1 "10nf" H 1115 6955 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1038 6850 50  0001 C CNN
 F 3 "~" H 1000 7000 50  0001 C CNN
@@ -1235,15 +1105,6 @@ Wire Wire Line
 	1100 6850 1100 7150
 Connection ~ 1100 7150
 Wire Wire Line
-	1100 7150 2100 7150
-Wire Wire Line
-	1800 6100 1900 6100
-Connection ~ 1900 6100
-Wire Wire Line
-	1900 6100 2450 6100
-Wire Wire Line
-	2300 5900 2300 6950
-Wire Wire Line
 	7350 3250 7350 3650
 Wire Wire Line
 	1300 900  1300 1050
@@ -1256,10 +1117,10 @@ Wire Wire Line
 	1450 1900 1300 1900
 Connection ~ 1450 1600
 $Comp
-L Device:CP C?
+L Device:CP C5
 U 1 1 5EAE958F
 P 1450 1750
-F 0 "C?" H 1565 1796 50  0000 L CNN
+F 0 "C5" H 1565 1796 50  0000 L CNN
 F 1 "22u" H 1565 1705 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1488 1600 50  0001 C CNN
 F 3 "~" H 1450 1750 50  0001 C CNN
@@ -1293,10 +1154,10 @@ F 3 "" H 1450 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 5EBC17FF
 P 1700 4350
-F 0 "R?" V 1907 4350 50  0000 C CNN
+F 0 "R2" V 1907 4350 50  0000 C CNN
 F 1 "1k" V 1816 4350 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 1630 4350 50  0001 C CNN
 F 3 "~" H 1700 4350 50  0001 C CNN
@@ -1304,10 +1165,10 @@ F 3 "~" H 1700 4350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R3
 U 1 1 5EBCD74E
 P 1700 4450
-F 0 "R?" V 1750 4650 50  0000 C CNN
+F 0 "R3" V 1750 4650 50  0000 C CNN
 F 1 "1k" V 1750 4300 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 1630 4450 50  0001 C CNN
 F 3 "~" H 1700 4450 50  0001 C CNN
@@ -1315,10 +1176,10 @@ F 3 "~" H 1700 4450 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R4
 U 1 1 5EBD9490
 P 1700 4550
-F 0 "R?" V 1585 4550 50  0000 C CNN
+F 0 "R4" V 1585 4550 50  0000 C CNN
 F 1 "1k" V 1494 4550 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 1630 4550 50  0001 C CNN
 F 3 "~" H 1700 4550 50  0001 C CNN
@@ -1340,10 +1201,10 @@ Wire Wire Line
 Text GLabel 2650 1950 2    50   Output ~ 0
 SW1
 $Comp
-L Device:R R?
+L Device:R R22
 U 1 1 5EC9FF47
 P 4050 1400
-F 0 "R?" H 4120 1446 50  0000 L CNN
+F 0 "R22" H 4120 1446 50  0000 L CNN
 F 1 "100R" H 4120 1355 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 3980 1400 50  0001 C CNN
 F 3 "~" H 4050 1400 50  0001 C CNN
@@ -1351,10 +1212,10 @@ F 3 "~" H 4050 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R20
 U 1 1 5ECACACF
 P 2600 1400
-F 0 "R?" H 2670 1446 50  0000 L CNN
+F 0 "R20" H 2670 1446 50  0000 L CNN
 F 1 "100R" H 2670 1355 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 2530 1400 50  0001 C CNN
 F 3 "~" H 2600 1400 50  0001 C CNN
@@ -1377,10 +1238,10 @@ Connection ~ 2600 1200
 Wire Wire Line
 	2600 1200 3100 1200
 $Comp
-L Device:R R?
+L Device:R R21
 U 1 1 5EC8E742
 P 3300 1400
-F 0 "R?" H 3370 1446 50  0000 L CNN
+F 0 "R21" H 3370 1446 50  0000 L CNN
 F 1 "100R" H 3370 1355 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 3230 1400 50  0001 C CNN
 F 3 "~" H 3300 1400 50  0001 C CNN
@@ -1388,12 +1249,12 @@ F 3 "~" H 3300 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Jumper:Jumper_2_Open JP?
+L Jumper:Jumper_2_Open JP5
 U 1 1 5EDB1A38
 P 7550 3250
-F 0 "JP?" H 7550 3400 50  0000 C CNN
+F 0 "JP5" H 7550 3400 50  0000 C CNN
 F 1 "Jumper_2_Open" H 7550 3394 50  0001 C CNN
-F 2 "" H 7550 3250 50  0001 C CNN
+F 2 "can-usb:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 7550 3250 50  0001 C CNN
 F 3 "~" H 7550 3250 50  0001 C CNN
 	1    7550 3250
 	1    0    0    -1  
@@ -1403,12 +1264,12 @@ Solder jumper or 0R resistor\nfor STANDBY mode
 Text Notes 7950 4800 0    50   ~ 0
 Solder jumper or 0R resistor\nfor STANDBY mode
 $Comp
-L Jumper:Jumper_2_Open JP?
+L Jumper:Jumper_2_Open JP2
 U 1 1 5EE2007F
 P 7150 3250
-F 0 "JP?" H 7150 3393 50  0000 C CNN
+F 0 "JP2" H 7150 3393 50  0000 C CNN
 F 1 "Jumper_2_Open" H 7150 3394 50  0001 C CNN
-F 2 "" H 7150 3250 50  0001 C CNN
+F 2 "can-usb:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 7150 3250 50  0001 C CNN
 F 3 "~" H 7150 3250 50  0001 C CNN
 	1    7150 3250
 	1    0    0    -1  
@@ -1417,10 +1278,10 @@ Connection ~ 7350 3250
 Wire Wire Line
 	7100 1750 7350 1750
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0105
 U 1 1 5EED5122
 P 7750 1400
-F 0 "#PWR?" H 7750 1150 50  0001 C CNN
+F 0 "#PWR0105" H 7750 1150 50  0001 C CNN
 F 1 "GND" H 7838 1363 50  0000 L CNN
 F 2 "" H 7750 1400 50  0001 C CNN
 F 3 "" H 7750 1400 50  0001 C CNN
@@ -1431,36 +1292,14 @@ Wire Wire Line
 	7750 1350 7750 1400
 Wire Wire Line
 	7350 1350 7350 1750
-$Comp
-L Jumper:Jumper_2_Open JP?
-U 1 1 5EED512A
-P 7550 1350
-F 0 "JP?" H 7550 1500 50  0000 C CNN
-F 1 "Jumper_2_Open" H 7550 1494 50  0001 C CNN
-F 2 "" H 7550 1350 50  0001 C CNN
-F 3 "~" H 7550 1350 50  0001 C CNN
-	1    7550 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper:Jumper_2_Open JP?
-U 1 1 5EED5130
-P 7150 1350
-F 0 "JP?" H 7150 1493 50  0000 C CNN
-F 1 "Jumper_2_Open" H 7150 1494 50  0001 C CNN
-F 2 "" H 7150 1350 50  0001 C CNN
-F 3 "~" H 7150 1350 50  0001 C CNN
-	1    7150 1350
-	1    0    0    -1  
-$EndComp
 Connection ~ 7350 1350
 Wire Wire Line
 	7100 5350 7350 5350
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0106
 U 1 1 5EEFA92F
 P 7750 5000
-F 0 "#PWR?" H 7750 4750 50  0001 C CNN
+F 0 "#PWR0106" H 7750 4750 50  0001 C CNN
 F 1 "GND" H 7838 4963 50  0000 L CNN
 F 2 "" H 7750 5000 50  0001 C CNN
 F 3 "" H 7750 5000 50  0001 C CNN
@@ -1472,33 +1311,33 @@ Wire Wire Line
 Wire Wire Line
 	7350 4950 7350 5350
 $Comp
-L Jumper:Jumper_2_Open JP?
+L Jumper:Jumper_2_Open JP6
 U 1 1 5EEFA937
 P 7550 4950
-F 0 "JP?" H 7550 5100 50  0000 C CNN
+F 0 "JP6" H 7550 5100 50  0000 C CNN
 F 1 "Jumper_2_Open" H 7550 5094 50  0001 C CNN
-F 2 "" H 7550 4950 50  0001 C CNN
+F 2 "can-usb:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 7550 4950 50  0001 C CNN
 F 3 "~" H 7550 4950 50  0001 C CNN
 	1    7550 4950
 	1    0    0    -1  
 $EndComp
 $Comp
-L Jumper:Jumper_2_Open JP?
+L Jumper:Jumper_2_Open JP3
 U 1 1 5EEFA93D
 P 7150 4950
-F 0 "JP?" H 7150 5093 50  0000 C CNN
+F 0 "JP3" H 7150 5093 50  0000 C CNN
 F 1 "Jumper_2_Open" H 7150 5094 50  0001 C CNN
-F 2 "" H 7150 4950 50  0001 C CNN
+F 2 "can-usb:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 7150 4950 50  0001 C CNN
 F 3 "~" H 7150 4950 50  0001 C CNN
 	1    7150 4950
 	1    0    0    -1  
 $EndComp
 Connection ~ 7350 4950
 $Comp
-L Device:C C?
+L Device:C C6
 U 1 1 5E6151B0
 P 1800 1750
-F 0 "C?" H 1915 1796 50  0000 L CNN
+F 0 "C6" H 1915 1796 50  0000 L CNN
 F 1 "2.2u" H 1915 1705 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1838 1600 50  0001 C CNN
 F 3 "~" H 1800 1750 50  0001 C CNN
@@ -1514,4 +1353,203 @@ Wire Wire Line
 Connection ~ 1300 1050
 Wire Wire Line
 	1300 1050 1300 1500
+$Comp
+L power:+5V #PWR02
+U 1 1 5E7BB094
+P 2350 4950
+F 0 "#PWR02" H 2350 4800 50  0001 C CNN
+F 1 "+5V" H 2365 5123 50  0000 C CNN
+F 2 "" H 2350 4950 50  0001 C CNN
+F 3 "" H 2350 4950 50  0001 C CNN
+	1    2350 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 5350 2350 5250
+Wire Wire Line
+	1700 5350 2350 5350
+Connection ~ 2350 5350
+Wire Wire Line
+	2200 5550 1700 5550
+Connection ~ 2200 7150
+$Comp
+L power:GND #PWR0104
+U 1 1 5E775B16
+P 2650 7150
+F 0 "#PWR0104" H 2650 6900 50  0001 C CNN
+F 1 "GND" H 2655 6977 50  0000 C CNN
+F 2 "" H 2650 7150 50  0001 C CNN
+F 3 "" H 2650 7150 50  0001 C CNN
+	1    2650 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 6100 2450 6950
+Text GLabel 3150 6100 2    50   BiDi ~ 0
+D+
+Text GLabel 3150 5900 2    50   BiDi ~ 0
+D-
+Connection ~ 2650 7150
+Wire Wire Line
+	1800 6100 2450 6100
+Connection ~ 2450 6100
+Wire Wire Line
+	2450 6100 3150 6100
+Wire Wire Line
+	2650 5350 2650 6750
+Wire Wire Line
+	2350 5350 2650 5350
+Wire Wire Line
+	2200 7150 2650 7150
+Wire Wire Line
+	2850 6950 2850 5900
+Connection ~ 2850 5900
+Wire Wire Line
+	1800 5900 2850 5900
+Wire Wire Line
+	2850 5900 3150 5900
+$Comp
+L Device:R R12
+U 1 1 5E815524
+P 2200 6750
+F 0 "R12" H 2270 6796 50  0000 L CNN
+F 1 "5.1k" H 2270 6705 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2130 6750 50  0001 C CNN
+F 3 "~" H 2200 6750 50  0001 C CNN
+	1    2200 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 6600 2200 5550
+Wire Wire Line
+	2200 6900 2200 7150
+Wire Wire Line
+	1700 5650 1900 5650
+Wire Wire Line
+	1100 7150 1900 7150
+Connection ~ 1900 7150
+Wire Wire Line
+	1900 7150 2200 7150
+Wire Wire Line
+	1900 6900 1900 7150
+$Comp
+L Device:R R5
+U 1 1 5E807EE5
+P 1900 6750
+F 0 "R5" H 1970 6796 50  0000 L CNN
+F 1 "5.1k" H 1970 6705 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1830 6750 50  0001 C CNN
+F 3 "~" H 1900 6750 50  0001 C CNN
+	1    1900 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 6600 1900 5650
+$Comp
+L Device:D_Schottky D5
+U 1 1 5E92324D
+P 2350 5100
+F 0 "D5" V 2304 5179 50  0000 L CNN
+F 1 "D_Schottky" V 2395 5179 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-123" H 2350 5100 50  0001 C CNN
+F 3 "~" H 2350 5100 50  0001 C CNN
+	1    2350 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L canfd-usb-nucleo:BH_Conn_01x10 J1
+U 2 1 5E5E91C9
+P 10400 1800
+F 0 "J1" H 10418 1475 50  0000 C CNN
+F 1 "Conn_01x10" H 10418 1566 50  0000 C CNN
+F 2 "can-usb:IDC-Header_2x05_P2.54mm_Vertical" H 10400 1800 50  0001 C CNN
+F 3 "~" H 10400 1800 50  0001 C CNN
+	2    10400 1800
+	1    0    0    1   
+$EndComp
+$Comp
+L Jumper:Jumper_2_Open JP4
+U 1 1 5EED512A
+P 7550 1350
+F 0 "JP4" H 7550 1500 50  0000 C CNN
+F 1 "Jumper_2_Open" H 7550 1494 50  0001 C CNN
+F 2 "can-usb:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 7550 1350 50  0001 C CNN
+F 3 "~" H 7550 1350 50  0001 C CNN
+	1    7550 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:Jumper_2_Open JP1
+U 1 1 5EED5130
+P 7150 1350
+F 0 "JP1" H 7150 1493 50  0000 C CNN
+F 1 "Jumper_2_Open" H 7150 1494 50  0001 C CNN
+F 2 "can-usb:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 7150 1350 50  0001 C CNN
+F 3 "~" H 7150 1350 50  0001 C CNN
+	1    7150 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 J4
+U 1 1 5E770DAD
+P 1100 5950
+F 0 "J4" H 1207 6817 50  0000 C CNN
+F 1 "USB_C_Receptacle_USB2.0" H 1207 6726 50  0000 C CNN
+F 2 "can-usb:L-KLS1-TIPEC-B" H 1250 5950 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1250 5950 50  0001 C CNN
+	1    1100 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 5250 5000 5250
+Connection ~ 4500 5550
+Wire Wire Line
+	4500 5550 4500 5600
+Wire Wire Line
+	4500 5550 5000 5550
+Connection ~ 4500 5250
+$Comp
+L power:+5V #PWR012
+U 1 1 5E64427E
+P 4500 5250
+F 0 "#PWR012" H 4500 5100 50  0001 C CNN
+F 1 "+5V" H 4515 5423 50  0000 C CNN
+F 2 "" H 4500 5250 50  0001 C CNN
+F 3 "" H 4500 5250 50  0001 C CNN
+	1    4500 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5E644270
+P 4500 5600
+F 0 "#PWR013" H 4500 5350 50  0001 C CNN
+F 1 "GND" H 4505 5427 50  0000 C CNN
+F 2 "" H 4500 5600 50  0001 C CNN
+F 3 "" H 4500 5600 50  0001 C CNN
+	1    4500 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5E64426A
+P 4500 5400
+F 0 "C3" H 4615 5446 50  0000 L CNN
+F 1 "100n" H 4615 5355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4538 5250 50  0001 C CNN
+F 3 "~" H 4500 5400 50  0001 C CNN
+	1    4500 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Power_Protection:NUP2202 U1
+U 1 1 5E775B10
+P 2650 6950
+F 0 "U1" H 2894 6996 50  0000 L CNN
+F 1 "USBLC6-2SC6" H 2894 6905 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6_Handsoldering" H 2730 7025 50  0001 C CNN
+F 3 "http://www.onsemi.ru.com/pub_link/Collateral/NUP2202W1-D.PDF" H 2730 7025 50  0001 C CNN
+	1    2650 6950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
