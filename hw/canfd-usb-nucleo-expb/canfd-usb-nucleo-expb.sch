@@ -54,9 +54,9 @@ Wire Wire Line
 Wire Wire Line
 	8650 2100 8650 2300
 Text GLabel 9750 2300 3    50   BiDi ~ 0
-CAN1_L-
+CAN1_N
 Text GLabel 9750 1600 1    50   BiDi ~ 0
-CAN1_H+
+CAN1_P
 $Comp
 L power:+3.3V #PWR018
 U 1 1 5E5A6B3A
@@ -184,13 +184,13 @@ Wire Wire Line
 Text GLabel 1350 2400 2    50   Output ~ 0
 TX1
 Text GLabel 1350 2550 2    50   Input ~ 0
-RX2
-Text GLabel 1350 2650 2    50   Output ~ 0
-TX2
-Text GLabel 1350 2800 2    50   Input ~ 0
 RX3
-Text GLabel 1350 2900 2    50   Output ~ 0
+Text GLabel 1350 2650 2    50   Output ~ 0
 TX3
+Text GLabel 1350 2800 2    50   Input ~ 0
+RX2
+Text GLabel 1350 2900 2    50   Output ~ 0
+TX2
 Text GLabel 1350 3150 2    50   BiDi ~ 0
 D-
 Text GLabel 1350 3050 2    50   BiDi ~ 0
@@ -223,9 +223,9 @@ Wire Wire Line
 Wire Wire Line
 	8650 4000 8650 4200
 Text GLabel 9750 4200 3    50   BiDi ~ 0
-CAN2_L+
+CAN2_N
 Text GLabel 9750 3500 1    50   BiDi ~ 0
-CAN2_H+
+CAN2_P
 $Comp
 L power:+3.3V #PWR019
 U 1 1 5E635F2E
@@ -401,9 +401,9 @@ Wire Wire Line
 Wire Wire Line
 	8650 5700 8650 5900
 Text GLabel 9750 5900 3    50   BiDi ~ 0
-CAN3_L-
+CAN3_N
 Text GLabel 9750 5200 1    50   BiDi ~ 0
-CAN3_H+
+CAN3_P
 $Comp
 L power:+3.3V #PWR020
 U 1 1 5E64425E
@@ -500,8 +500,6 @@ F 3 "" H 5500 5400 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	5250 5650 5500 5650
-Wire Wire Line
-	1150 1700 1250 1700
 $Comp
 L power:+3.3V #PWR01
 U 1 1 5E697522
@@ -1051,12 +1049,7 @@ Wire Wire Line
 Wire Wire Line
 	1700 6150 1800 6150
 Wire Wire Line
-	1800 5850 1800 5900
-Wire Wire Line
 	1800 6050 1800 6100
-Connection ~ 1800 5900
-Wire Wire Line
-	1800 5900 1800 5950
 Connection ~ 1800 6100
 Wire Wire Line
 	1800 6100 1800 6150
@@ -1335,13 +1328,6 @@ Wire Wire Line
 	2350 5350 2650 5350
 Wire Wire Line
 	2200 7150 2650 7150
-Wire Wire Line
-	2850 6950 2850 5900
-Connection ~ 2850 5900
-Wire Wire Line
-	1800 5900 2850 5900
-Wire Wire Line
-	2850 5900 3150 5900
 $Comp
 L Device:R R6
 U 1 1 5E815524
@@ -1454,7 +1440,7 @@ F 3 "~" H 4500 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Power_Protection:NUP2202 U1
+L canfd-usb-nucleo:NUP2202 U1
 U 1 1 5E775B10
 P 2650 6950
 F 0 "U1" H 2894 6996 50  0000 L CNN
@@ -1517,9 +1503,6 @@ Wire Wire Line
 	7100 5350 7350 5350
 Wire Wire Line
 	7100 4950 6950 4950
-Connection ~ 1250 1700
-Wire Wire Line
-	1250 1700 1300 1700
 $Comp
 L Device:R R20
 U 1 1 5E635F20
@@ -1531,4 +1514,18 @@ F 3 "~" H 9000 4050 50  0001 C CNN
 	1    9000 4050
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1150 1700 1300 1700
+Wire Wire Line
+	1800 5850 1800 5900
+Connection ~ 1800 5900
+Wire Wire Line
+	1800 5900 1800 5950
+Wire Wire Line
+	2850 6950 2850 5900
+Wire Wire Line
+	1800 5900 2850 5900
+Connection ~ 2850 5900
+Wire Wire Line
+	2850 5900 3150 5900
 $EndSCHEMATC
