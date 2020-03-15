@@ -181,15 +181,15 @@ Wire Wire Line
 	5000 1750 5000 1650
 Wire Wire Line
 	5250 2050 5500 2050
+Text GLabel 1350 2900 2    50   Output ~ 0
+TX3
+Text GLabel 1350 2300 2    50   Input ~ 0
+RX1
 Text GLabel 1350 2400 2    50   Output ~ 0
 TX1
 Text GLabel 1350 2550 2    50   Input ~ 0
-RX3
-Text GLabel 1350 2650 2    50   Output ~ 0
-TX3
-Text GLabel 1350 2800 2    50   Input ~ 0
 RX2
-Text GLabel 1350 2900 2    50   Output ~ 0
+Text GLabel 1350 2650 2    50   Output ~ 0
 TX2
 Text GLabel 1350 3150 2    50   BiDi ~ 0
 D-
@@ -553,7 +553,7 @@ L canfd-usb-nucleo:Conn_02x19_Odd_Even CN1
 U 4 1 5E6737E0
 P 900 1600
 F 0 "CN1" H 979 1915 50  0000 C CNN
-F 1 "POWER" H 979 1824 50  0000 C CNN
+F 1 "Conn_02x19_Odd_Even" H 979 1824 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x19_Pitch2.54mm" H 400 1150 50  0001 C CNN
 F 3 "" H 400 1150 50  0001 C CNN
 	4    900  1600
@@ -646,8 +646,8 @@ F 3 "~" H 2600 1700 50  0001 C CNN
 	1    2600 1700
 	1    0    0    -1  
 $EndComp
-Text GLabel 1350 2300 2    50   Input ~ 0
-RX1
+Text GLabel 1350 2800 2    50   Input ~ 0
+RX3
 Text GLabel 3350 1950 2    50   Output ~ 0
 SW2
 Text GLabel 4100 1950 2    50   Output ~ 0
@@ -843,26 +843,26 @@ $Comp
 L canfd-usb-nucleo:Conn_02x19_Odd_Even CN2
 U 5 1 5E62EF55
 P 1050 4550
-F 0 "CN2" H 1050 5550 50  0000 C CNN
+F 0 "CN2" H 1100 4950 50  0000 C CNN
 F 1 "CONN" H 1132 5576 50  0001 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x19_Pitch2.54mm" H 2100 4850 50  0001 C CNN
 F 3 "" H 2100 4850 50  0001 C CNN
 	5    1050 4550
 	1    0    0    -1  
 $EndComp
-Text GLabel 1350 3650 2    50   Input ~ 0
+Text GLabel 1400 3900 2    50   Input ~ 0
 SW1
-Text GLabel 1350 3750 2    50   Input ~ 0
+Text GLabel 1400 3700 2    50   Input ~ 0
 SW2
-Text GLabel 1350 3850 2    50   Input ~ 0
+Text GLabel 1400 3500 2    50   Input ~ 0
 SW3
-Text GLabel 1350 3950 2    50   Output ~ 0
-LED1
-Text GLabel 1350 4050 2    50   Output ~ 0
-LED2
-Text GLabel 1350 4150 2    50   Output ~ 0
-LED3
 Text GLabel 1350 4250 2    50   Output ~ 0
+LED1
+Text GLabel 1400 3600 2    50   Output ~ 0
+LED2
+Text GLabel 1400 3800 2    50   Output ~ 0
+LED3
+Text GLabel 1400 4000 2    50   Output ~ 0
 LED4
 Text GLabel 2950 3600 0    50   Input ~ 0
 LED1
@@ -1033,11 +1033,11 @@ Wire Wire Line
 Wire Wire Line
 	5250 2200 5500 2200
 Text GLabel 1950 4550 2    50   Output ~ 0
-STANDBY_3
+STANDBY_1
 Text GLabel 1950 4450 2    50   Output ~ 0
 STANDBY_2
 Text GLabel 1950 4350 2    50   Output ~ 0
-STANDBY_1
+STANDBY_3
 Wire Wire Line
 	7100 3650 7350 3650
 Wire Wire Line
@@ -1528,4 +1528,15 @@ Wire Wire Line
 Connection ~ 2850 5900
 Wire Wire Line
 	2850 5900 3150 5900
+$Comp
+L canfd-usb-nucleo:Conn_02x19_Odd_Even CN1
+U 6 1 5E95CC46
+P 1100 3750
+F 0 "CN1" H 1207 4216 50  0000 C CNN
+F 1 "Conn_02x19_Odd_Even" H 1207 4125 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x19_Pitch2.54mm" H 2150 4050 50  0001 C CNN
+F 3 "" H 2150 4050 50  0001 C CNN
+	6    1100 3750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
