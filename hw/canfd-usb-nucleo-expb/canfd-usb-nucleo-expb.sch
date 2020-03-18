@@ -1260,17 +1260,6 @@ F 3 "" H 7750 5000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7750 4950 7750 5000
-$Comp
-L Device:C C3
-U 1 1 5E6151B0
-P 1800 1750
-F 0 "C3" H 1915 1796 50  0000 L CNN
-F 1 "2.2u" H 1915 1705 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1838 1600 50  0001 C CNN
-F 3 "~" H 1800 1750 50  0001 C CNN
-	1    1800 1750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1800 1900 1450 1900
 Wire Wire Line
@@ -1302,32 +1291,18 @@ Connection ~ 2200 7150
 $Comp
 L power:GND #PWR05
 U 1 1 5E775B16
-P 2650 7150
-F 0 "#PWR05" H 2650 6900 50  0001 C CNN
-F 1 "GND" H 2655 6977 50  0000 C CNN
-F 2 "" H 2650 7150 50  0001 C CNN
-F 3 "" H 2650 7150 50  0001 C CNN
-	1    2650 7150
+P 2850 7150
+F 0 "#PWR05" H 2850 6900 50  0001 C CNN
+F 1 "GND" H 2855 6977 50  0000 C CNN
+F 2 "" H 2850 7150 50  0001 C CNN
+F 3 "" H 2850 7150 50  0001 C CNN
+	1    2850 7150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2450 6100 2450 6950
-Text GLabel 3150 6100 2    50   BiDi ~ 0
+Text GLabel 3550 6100 2    50   BiDi ~ 0
 D+
-Text GLabel 3150 5900 2    50   BiDi ~ 0
+Text GLabel 3550 5900 2    50   BiDi ~ 0
 D-
-Connection ~ 2650 7150
-Wire Wire Line
-	1800 6100 2450 6100
-Connection ~ 2450 6100
-Wire Wire Line
-	2450 6100 3150 6100
-Wire Wire Line
-	2650 5350 2650 6750
-Wire Wire Line
-	2350 5350 2650 5350
-Wire Wire Line
-	2200 7150 2650 7150
 $Comp
 L Device:R R6
 U 1 1 5E815524
@@ -1440,17 +1415,6 @@ F 3 "~" H 4500 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L canfd-usb-nucleo:NUP2202 U1
-U 1 1 5E775B10
-P 2650 6950
-F 0 "U1" H 2894 6996 50  0000 L CNN
-F 1 "USBLC6-2SC6" H 2894 6905 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23-6_Handsoldering" H 2730 7025 50  0001 C CNN
-F 3 "http://www.onsemi.ru.com/pub_link/Collateral/NUP2202W1-D.PDF" H 2730 7025 50  0001 C CNN
-	1    2650 6950
-	1    0    0    -1  
-$EndComp
-$Comp
 L Jumper:Jumper_3_Open JP1
 U 1 1 5E69DD51
 P 7350 1350
@@ -1521,13 +1485,6 @@ Wire Wire Line
 Connection ~ 1800 5900
 Wire Wire Line
 	1800 5900 1800 5950
-Wire Wire Line
-	2850 6950 2850 5900
-Wire Wire Line
-	1800 5900 2850 5900
-Connection ~ 2850 5900
-Wire Wire Line
-	2850 5900 3150 5900
 $Comp
 L canfd-usb-nucleo:Conn_02x19_Odd_Even CN1
 U 6 1 5E95CC46
@@ -1541,4 +1498,47 @@ F 3 "" H 2150 4050 50  0001 C CNN
 $EndComp
 Text Label 1850 5350 0    50   ~ 0
 Vbus
+$Comp
+L Device:C C3
+U 1 1 5E6151B0
+P 1800 1750
+F 0 "C3" H 1915 1796 50  0000 L CNN
+F 1 "2.2u" H 1915 1705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1838 1600 50  0001 C CNN
+F 3 "~" H 1800 1750 50  0001 C CNN
+	1    1800 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Power_Protection:USBLC6-2SC6 U1
+U 1 1 5E775B10
+P 2850 6000
+F 0 "U1" H 3200 6500 50  0000 L CNN
+F 1 "USBLC6-2SC6" H 3000 6400 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6_Handsoldering" H 2930 6075 50  0001 C CNN
+F 3 "http://www.onsemi.ru.com/pub_link/Collateral/NUP2202W1-D.PDF" H 2930 6075 50  0001 C CNN
+	1    2850 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 5900 3550 5900
+Wire Wire Line
+	1800 5900 2350 5900
+Wire Wire Line
+	1800 6100 2350 6100
+Wire Wire Line
+	3350 6100 3550 6100
+Wire Wire Line
+	2850 5500 2850 5350
+Wire Wire Line
+	2350 5350 2850 5350
+Wire Wire Line
+	2850 6500 2850 7150
+Wire Wire Line
+	2200 7150 2850 7150
+Connection ~ 2850 7150
+Text Label 1950 5900 0    50   ~ 0
+D-in
+Text Label 1950 6100 0    50   ~ 0
+D+in
 $EndSCHEMATC
